@@ -1,0 +1,18 @@
+// 1. Load the Variables (Design Tokens)
+// We use 'as *' so we don't have to type 'variables.$color-name' every time
+@use "variables" as *;
+
+// 2. Load the Base styles (The necessities)
+@use "base";
+
+// 3. Global Classes (The "Utility" Layer)
+// These are classes you'll use across many different components
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 $space-md; // Uses a variable from _variables.scss
+}
+
+.section-padding {
+  padding: $space-lg 0;
+}

@@ -1,23 +1,67 @@
-<!doctype html>
+---
+// 1. Import your modular Sass
+import '../styles/global.scss';
+
+// 2. Define the Interface (Props) for the Layout
+// This ensures that every page using this layout provides a title
+interface Props {
+  title: string;
+  description?: string; // The '?' means it's optional
+}
+
+const { title, description = "Software Engineering Student" } = Astro.props;
+---
+
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    
+    <title>{title}</title>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  
+  <body>
+    <header class="main-nav">
+      <nav class="container">
+        <a href="/" class="logo">Yash Shah</a>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot /> 
+    </main>
+
+    <footer class="container">
+      <p>&copy; {new Date().getFullYear()} Built with Astro & Sass</p>
+    </footer>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style lang="scss">
+  // You can add layout-specific Sass here or keep it in global.scss
+  .main-nav {
+    border-bottom: 1px solid var(--clr-border); // Using a variable from your SCSS
+    padding: 1rem 0;
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+  }
 </style>
