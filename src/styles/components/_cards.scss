@@ -1,0 +1,26 @@
+//cards
+@use '../mixins' as m;
+@use '../variables' as v;
+
+.card {
+    @include m.card-border(v.$color-bg-surface);
+    background-color: v.$color-bg-surface;
+    padding: v.$space-lg;
+    margin-bottom: v.$space-lg;
+
+    &__image {
+        width: 50%;
+        height: auto;
+        display: block;
+        border-radius: 0.5rem;
+    }
+
+    &--image {
+        padding: 0;
+        overflow: hidden;
+
+        .card__image {
+            display: block;
+        }
+    }
+}

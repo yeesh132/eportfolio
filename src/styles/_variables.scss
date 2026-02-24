@@ -1,10 +1,13 @@
-// Tokens (The "Data")
-$color-bg: #474343;
-$color-text: #e5e7eb;
-$font-main: 'Inter', sans-serif;
-$space-unit: 1rem;
+//css data/tokens i load (giving me the ability to use variables in my css) and then i load the base styles (the necessities) and then i load the mixins (reusable pieces of css that can be used across different components) and then i define global classes (utility layer) 
+//that can be used across different components as well. this is the main scss file that will be compiled into css and used in my project.
 
-$space-sm: 8px;
-$space-md: 16px;
-$space-lg: 32px;
-$space-xl: 64px;
+$color-primary: #3b82f6;
+$color-accent: #fbbf24;
+$color-bg-main: #0f172a;
+$color-bg-surface: #1e293b;
+$color-text-main: #e5e7eb;
+
+// Spacing (8px grid)
+$space-unit: 8px;
+$space-md: $space-unit * 2; // 16px
+$space-lg: $space-unit * 4; // 32px
