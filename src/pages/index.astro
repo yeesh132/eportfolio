@@ -1,0 +1,26 @@
+---
+import Layout from '../layout/layout.astro';
+import { Image } from 'astro:assets';
+import profilePic from '../../public/about-me-image.png';
+---
+
+<Layout title="Home">
+<Image src={profilePic} alt="Yash Shah" class="profile-pic" />
+  <h1>Hi, I'm Yash.</h1>
+  <p>
+    I am a final year Software Engineering student at the
+University of Technology Sydney (UTS). I'm someone who is
+passionate about problem-solving and strategic thinking, which is
+what drew me to software engineering. I enjoy the process of breaking
+down complex, real-world problems into smaller, more manageable
+pieces and building creative solutions to them
+  </p>
+  <p>
+    My experience at Optik Consultancy has solidified my desire to pursue a
+career at the intersection of AI Engineering and Backend Development.
+While I enjoyed the frontend challenges of React, I am specifically targeting
+roles where I can architect the backend—working with APIs and
+databases—while managing the deployment and scaling of LLM-driven
+applications
+  </p>
+</layout>

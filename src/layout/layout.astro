@@ -1,0 +1,33 @@
+---
+// src/layouts/BaseLayout.astro
+// Props: title (string) — each page passes its own tab title
+import Navbar from '../components/navbar.astro';
+const { title = 'Yash Shah' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+
+  <body>
+    <Navbar />
+
+    <main>
+      <slot />   <!-- each page's content goes here -->
+    </main>
+
+    <footer>
+      <p>© {new Date().getFullYear()} Yash Shah</p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+---
+const navLinks = [
+  { text: 'Home', href: '/' },
+  { text: 'Experience', href: '/experience' },
+  { text: 'Contact', href: '/contact' },
+];
+---
+
+<nav class="navbar">
+  <a class="navbar-logo" href="/">Yash<span>.</span></a>
+
+  <ul class="navbar-links">
+    {navLinks.map((link) => (
+      <li>
+        <a href={link.href}>{link.text}</a>
+      </li>
+    ))}
+  </ul>
+
+  <a class="btn-nav" href="/Yash Shah Resume.docx" target="_blank" rel="noopener noreferrer">
+    Resume ↗
+  </a>
+</nav>
