@@ -1,26 +1,18 @@
-//this will be the final scss file that becomes the css file. 
-//all variables and mixins should be imported here, and all global styles should be defined here as well.
+// 1. Load the Variables (Design Tokens)
+// We use 'as *' so we don't have to type 'variables.$color-name' every time
+@use "variables" as *;
 
-@use 'variables';
-@use 'mixins';
-@use 'components';
+// 2. Load the Base styles (The necessities)
+@use "base";
 
-// Global styles
-//highest level element (html)
-:root {
-    --color-primary: #3b82f6;
-    --color-accent: #fbbf24;
-    --color-bg-main: #0f172a;
-    --color-bg-surface: #1e293b;
-    --color-text-main: #e5e7eb;
+// 3. Global Classes (The "Utility" Layer)
+// These are classes you'll use across many different components
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 $space-md; // Uses a variable from _variables.scss
 }
 
-body {
-    background-color: variables.$color-bg-main;
-    color: variables.$color-text-main;
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
+.section-padding {
+  padding: $space-lg 0;
 }
-
-
