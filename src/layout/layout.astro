@@ -2,6 +2,7 @@
 // src/layouts/BaseLayout.astro
 // Props: title (string) — each page passes its own tab title
 import Navbar from '../components/navbar.astro';
+import '../styles/global.scss';
 const { title = 'Yash Shah' } = Astro.props;
 ---
 
@@ -15,7 +16,6 @@ const { title = 'Yash Shah' } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/src/styles/global.scss" />
   </head>
 
   <body>
