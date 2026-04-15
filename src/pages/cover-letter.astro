@@ -1,88 +1,339 @@
 ---
+// src/pages/cover-letter.astro
 import Layout from '../layout/layout.astro';
+
+// Criteria pulled into an array so the template stays clean
+const criteria = [
+  {
+    id: '3.1',
+    label: 'Ethical conduct and professional accountability',
+    body: `During my internship at Optik Consultancy, I worked on a team developing a RAG-based
+    chatbot for internal business documentation. I recognised the importance of ensuring both
+    reliability and transparency, so I refined prompt engineering techniques to strictly ground
+    outputs in source material and clearly communicated system limitations to stakeholders. As a
+    result, the client received a trustworthy tool that met realistic expectations and delivered
+    consistent value. This experience reinforced the importance of ethical responsibility and clear
+    communication when deploying AI systems.`,
+  },
+  {
+    id: '3.2',
+    label: 'Effective communication with engineers and stakeholders',
+    body: `In a fast-paced Agile internship environment, I needed to communicate technical progress
+    to both engineers and non-technical stakeholders. I actively participated in daily standups and
+    led contributions in weekly client meetings, translating complex development updates into clear,
+    business-relevant insights. This ensured continuous stakeholder alignment and allowed feedback
+    to be incorporated effectively into our 12-week development cycle. I learned that bridging the
+    gap between technical and non-technical audiences is critical to delivering successful software
+    solutions.`,
+  },
+  {
+    id: '3.3',
+    label: 'Engagement with a creative, innovative and proactive environment',
+    body: `While working in a highly innovative team at Optik, I was tasked with contributing to the
+    development of a full AI product within three months despite limited prior experience in vector
+    retrieval and full-stack AI. I proactively researched document ingestion strategies and
+    experimented with prompt engineering techniques to improve model performance. This enabled our
+    team to deliver a solution that exceeded the original project scope. I learned that proactively
+    engaging with unfamiliar technologies is key to thriving in innovative environments.`,
+  },
+  {
+    id: '3.4',
+    label: 'Ability to use and manage information',
+    body: `During chatbot development, I identified that the system struggled to retain context over
+    extended conversations. To address this, I designed and implemented a "summary storage" system
+    that condensed and preserved key conversational information within prompt limits. This
+    significantly improved response accuracy and conversational continuity. I learned the importance
+    of designing efficient information management strategies when working with constrained AI
+    systems.`,
+  },
+  {
+    id: '3.5',
+    label: 'Managing own performance in a professional environment',
+    body: `When transitioning into a full-time internship role, I needed to quickly adapt to
+    professional expectations and independently manage my workload. I took ownership of my assigned
+    full-stack modules, consistently met sprint deadlines ahead of schedule, and actively sought
+    feedback to improve both my technical and professional performance. This allowed me to deliver
+    high-quality work independently while integrating effectively into the team. I learned the
+    importance of self-discipline, adaptability, and continuous improvement in a professional
+    setting.`,
+  },
+  {
+    id: '3.6',
+    label: 'Teamwork and leadership',
+    body: `As part of a collaborative engineering team, I aimed to contribute to a supportive and
+    accountable team environment. I actively participated in problem-solving sessions, supported
+    teammates facing technical challenges, and ensured I met my own responsibilities to maintain
+    team momentum. This collaborative approach helped the team deliver a production-ready chatbot
+    on schedule. I learned that strong teamwork is built on accountability, communication, and a
+    willingness to support others.`,
+  },
+];
 ---
 
 <Layout title="Cover Letter — Yash Shah">
+  <div class="letter-wrap">
 
-  <!-- Opening -->
-  <section>
-    <p>Dear Hiring Manager,</p>
-    <p>
-      I am writing to express my enthusiastic interest in the Graduate Software Engineering position at Industrus Engineering. As a final-year Software Engineering student at UTS with a 6.5/7 GPA and a Dean's List award, I have developed a strong technical foundation that I am eager to apply to Industrus's innovative consulting projects.
-      My recent experience developing RAG-based AI pipelines in an Agile environment has prepared me to contribute effectively to your multidisciplinary team.
-    </p>
-  </section>
+    <!-- Letter card (feels like a physical document) -->
+    <div class="letter-card">
 
-  <!-- One section per selection criterion from the job ad -->
-  <!-- Use STAR: Situation, Task, Action, Result -->
+      <!-- Header meta -->
+      <div class="letter-meta">
+        <div class="letter-from">
+          <strong>Yash Shah</strong>
+          <span>yashs13245@gmail.com</span>
+          <span>0468 809 999</span>
+        </div>
+        <div class="letter-to">
+          <span class="section-label">Addressed to</span>
+          <strong>Hiring Manager</strong>
+          <span>Industrus Engineering</span>
+        </div>
+      </div>
 
-  <section>
-    <h2>3.1 Ethical conduct and professional accountability</h2>
-    <p>
-      During my internship at Optik Consultancy, I worked on a team developing a RAG-based chatbot for internal business documentation. 
-      I recognised the importance of ensuring both reliability and transparency, so I refined prompt engineering techniques to strictly ground outputs in source material and clearly communicated system limitations to stakeholders. 
-      As a result, the client received a trustworthy tool that met realistic expectations and delivered consistent value.
-      This experience reinforced the importance of ethical responsibility and clear communication when deploying AI systems.
-    </p>
-  </section>
+      <div class="letter-divider" />
 
-  <section>
-    <h2>3.2 Effective communication with engineers and stakeholders</h2>
-    <p>
-      In a fast-paced Agile internship environment, I needed to communicate technical progress to both engineers and non-technical stakeholders.
-      I actively participated in daily standups and led contributions in weekly client meetings, translating complex development updates into clear, business-relevant insights.
-      This ensured continuous stakeholder alignment and allowed feedback to be incorporated effectively into our 12-week development cycle. 
-      I learned that bridging the gap between technical and non-technical audiences is critical to delivering successful software solutions.
-    </p>
-  </section>
+      <!-- Salutation + opening -->
+      <div class="letter-opening">
+        <p class="salutation">Dear Hiring Manager,</p>
+        <p>
+          I am writing to express my enthusiastic interest in the Graduate Software Engineering
+          position at Industrus Engineering. As a final-year Software Engineering student at UTS
+          with a 6.5/7 GPA and a Dean's List award, I have developed a strong technical foundation
+          that I am eager to apply to Industrus's innovative consulting projects. My recent
+          experience developing RAG-based AI pipelines in an Agile environment has prepared me to
+          contribute effectively to your multidisciplinary team.
+        </p>
+      </div>
 
-  <section>
-    <h2>3.3 Engagement with a creative, innovative and proactive environment</h2>
-    <p>
-      While working in a highly innovative team at Optik, I was tasked with contributing to the development of a full AI product within three months despite limited prior experience in vector retrieval and full-stack AI. 
-      I proactively researched document ingestion strategies and experimented with prompt engineering techniques to improve model performance. 
-      This enabled our team to deliver a solution that exceeded the original project scope.
-      I learned that proactively engaging with unfamiliar technologies is key to thriving in innovative environments.
-    </p>
-  </section>
+      <div class="letter-divider" />
 
-  <section>
-    <h2>3.4 Ability to use and manage information</h2>
-    <p>
-      During chatbot development, I identified that the system struggled to retain context over extended conversations.
-      To address this, I designed and implemented a “summary storage” system that condensed and preserved key conversational information within prompt limits.
-      This significantly improved response accuracy and conversational continuity.
-      I learned the importance of designing efficient information management strategies when working with constrained AI systems.
-    </p>
-  </section>
+      <!-- Selection criteria -->
+      <div class="criteria-section">
+        <span class="section-label">Selection Criteria</span>
+        <p class="criteria-intro">
+          The following addresses each selection criterion using specific examples from my
+          professional experience.
+        </p>
 
-  <section>
-    <h2>3.5 Managing own performance in a professional environment</h2>
-    <p>
-      When transitioning into a full-time internship role, I needed to quickly adapt to professional expectations and independently manage my workload. 
-      I took ownership of my assigned full-stack modules, consistently met sprint deadlines ahead of schedule, and actively sought feedback to improve both my technical and professional performance. 
-      This allowed me to deliver high-quality work independently while integrating effectively into the team.
-      I learned the importance of self-discipline, adaptability, and continuous improvement in a professional setting.
-    </p>
-  </section>
+        <div class="criteria-list">
+          {criteria.map((c, i) => (
+            <div class="criterion reveal visible" style={`transition-delay: ${i * 0.08}s`}>
+              <div class="criterion-header">
+                <span class="criterion-id">{c.id}</span>
+                <h2>{c.label}</h2>
+              </div>
+              <p>{c.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
-  <section>
-    <h2>3.6 Teamwork and leadership</h2>
-    <p>
-      As part of a collaborative engineering team, I aimed to contribute to a supportive and accountable team environment. 
-      I actively participated in problem-solving sessions, supported teammates facing technical challenges, and ensured I met my own responsibilities to maintain team momentum.
-      This collaborative approach helped the team deliver a production-ready chatbot on schedule.
-      I learned that strong teamwork is built on accountability, communication, and a willingness to support others.
-    </p>
+      <div class="letter-divider" />
 
-  <!-- Closing -->
-  <section>
-    <p>
-      I welcome the opportunity to discuss how my adaptability and technical skills can support Industrus Engineering’s upcoming projects. I can be reached at 0468 809 999 or via email at yashs13245@gmail.com
- to arrange an interview. I look forward to hearing from you and have attached my resume for your consideration.
-    </p>
-    <p>Kind Regards,</p>
-    <p>Yash Shah</p>
-  </section>
+      <!-- Closing -->
+      <div class="letter-closing">
+        <p>
+          I welcome the opportunity to discuss how my adaptability and technical skills can support
+          Industrus Engineering's upcoming projects. I can be reached at 0468 809 999 or via email
+          at yashs13245@gmail.com to arrange an interview. I look forward to hearing from you and
+          have attached my resume for your consideration.
+        </p>
+        <div class="sign-off">
+          <p>Kind regards,</p>
+          <strong>Yash Shah</strong>
+        </div>
+      </div>
 
-</layout>
+    </div>
+  </div>
+</Layout>
+
+<style lang="scss">
+  // ── Page wrapper ──────────────────────────────
+  .letter-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 80px 24px 100px;
+  }
+
+  // ── Letter card ───────────────────────────────
+  // Styled to feel like a document sitting on the page
+  .letter-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 56px 64px;
+  }
+
+  // ── Divider ───────────────────────────────────
+  .letter-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 40px 0;
+  }
+
+  // ── Meta header (from / to) ───────────────────
+  .letter-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .letter-from,
+  .letter-to {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    strong {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: white;
+    }
+
+    span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+  }
+
+  .letter-to {
+    text-align: right;
+
+    .section-label {
+      margin-bottom: 6px;
+    }
+  }
+
+  // ── Opening ───────────────────────────────────
+  .letter-opening {
+    .salutation {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+  }
+
+  // ── Criteria section ──────────────────────────
+  .criteria-section {
+    .criteria-intro {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      margin-bottom: 36px;
+    }
+  }
+
+  .criteria-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  // ── Individual criterion ──────────────────────
+  .criterion {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      margin-bottom: 0;
+    }
+  }
+
+  .criterion-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .criterion-id {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--blue-light);
+    background: rgba(0, 119, 182, 0.12);
+    border: 1px solid rgba(0, 180, 216, 0.25);
+    padding: 3px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .criterion-header h2 {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    line-height: 1.4;
+    // override global h2 size — these are document headings not page headings
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
+
+  // ── Closing ───────────────────────────────────
+  .letter-closing {
+    p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+  }
+
+  .sign-off {
+    p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    strong {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: white;
+      display: block;
+    }
+  }
+
+  // ── Responsive ───────────────────────────────
+  @media (max-width: 768px) {
+    .letter-wrap {
+      padding: 48px 20px 72px;
+    }
+
+    .letter-card {
+      padding: 32px 24px;
+    }
+
+    .letter-meta {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .letter-to {
+      text-align: left;
+    }
+
+    .criterion-header {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+</style>

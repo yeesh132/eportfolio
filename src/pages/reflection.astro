@@ -1,61 +1,189 @@
 ---
+// src/pages/reflections.astro
 import Layout from '../layout/layout.astro';
 ---
 
 <Layout title="Reflections — Yash Shah">
+  <div class="reflections-wrap">
 
-<h1>Optik Consultancy Reflection</h1>
-  <!-- Repeat this block once for each Task 1a question -->
+    <div class="page-header">
+      <span class="section-label">Task 1a</span>
+      <h1>Optik Consultancy <span>Reflection</span></h1>
+      <!-- <p class="intro">
+        A reflection on my internship experience, the lessons learned, and how
+        it has shaped my identity as a software engineer.
+      </p> -->
+    </div>
 
-  <section>
-    <h2>What were your expectations about your internship before you joined?</h2>
-    <p>Before the internship, I expected to be assigned a low-skill project designed to cater to my lack
-of experience in a professional software environment. I also anticipated that I might not enjoy
-the experience, as the 9-to-5 commitment seemed questionable when many software roles
-offer hybrid or remote flexibility. Furthermore, I assumed that supervisors would constantly
-monitor my actions and that I would not be trusted with larger-scale, high-impact projects.</p>
-  </section>
+    <div class="questions">
 
-  <section>
-    <h2>What was the reality? How was it different from your expectations?</h2>
-    <p>The internship was far more challenging and rewarding than I had anticipated. While I quickly
-adapted to the 9-to-5 schedule, the work itself was much more substantial: I was tasked with
-building a fully functional product with my team within a 12-week timeframe. Despite having
-never handled a full-stack project of this scale, I was grateful for the opportunity to deliver a
-complete product. Most surprisingly, I was given significant autonomy, as my supervisors and
-team leads trusted me to manage my own workload and meet deadlines independently.</p>
-  </section>
+      <article class="question-card reveal visible">
+        <span class="q-number">01</span>
+        <div class="q-content">
+          <h2>What were your expectations about your internship before you joined?</h2>
+          <p>Before the internship, I expected to be assigned a low-skill project designed to cater to my
+            lack of experience in a professional software environment. I also anticipated that I might not
+            enjoy the experience, as the 9-to-5 commitment seemed questionable when many software
+            roles offer hybrid or remote flexibility. Furthermore, I assumed that supervisors would
+            constantly monitor my actions and that I would not be trusted with larger-scale,
+            high-impact projects.</p>
+        </div>
+      </article>
 
-  <section>
-    <h2>What lessons were the most important from your internship. Why were they important?</h2>
-    <p>One of the most critical lessons was the significance of effective daily standups. While I had
-used them sparingly in university, seeing them integrated with project management tools like
-Jira and Trello in a professional setting showed me how they prevent tasks from being delayed
-without the team's knowledge. Additionally, I learned the importance of team accountability. By
-holding each other responsible for our specific tasks and actions, we were able to maintain
-momentum and successfully develop a functioning product as a cohesive unit.</p>
-    </section>
+      <article class="question-card reveal delay-1 visible">
+        <span class="q-number">02</span>
+        <div class="q-content">
+          <h2>What was the reality? How was it different from your expectations?</h2>
+          <p>The internship was far more challenging and rewarding than I had anticipated. While I quickly
+            adapted to the 9-to-5 schedule, the work itself was much more substantial: I was tasked with
+            building a fully functional product with my team within a 12-week timeframe. Despite having
+            never handled a full-stack project of this scale, I was grateful for the opportunity to deliver a
+            complete product. Most surprisingly, I was given significant autonomy, as my supervisors and
+            team leads trusted me to manage my own workload and meet deadlines independently.</p>
+        </div>
+      </article>
 
-    <section>
-    <h2>After your workplace experience, what would you say your value proposition would be to an
-employer? How can you demonstrate this?</h2>
-    <p>My core value proposition is adaptability. I entered this internship with no prior experience in
-full-stack development or AI-RAG pipelines. Although the initial weeks were difficult as I learned
-to navigate client meetings and technical updates, I rapidly adjusted. I can demonstrate this
-adaptability through my record of opening and reviewing multiple pull requests, integrating
-client feedback regarding my professional manner, and receiving positive stakeholder reviews
-on the final code base.</p>
-    </section>
+      <article class="question-card reveal delay-2 visible">
+        <span class="q-number">03</span>
+        <div class="q-content">
+          <h2>What lessons were the most important from your internship? Why were they important?</h2>
+          <p>One of the most critical lessons was the significance of effective daily standups. While I had
+            used them sparingly in university, seeing them integrated with project management tools like
+            Jira and Trello in a professional setting showed me how they prevent tasks from being delayed
+            without the team's knowledge. Additionally, I learned the importance of team accountability.
+            By holding each other responsible for our specific tasks and actions, we were able to maintain
+            momentum and successfully develop a functioning product as a cohesive unit.</p>
+        </div>
+      </article>
 
-    <section>
-        <h2>How did your internship influence the type of role in which you are interested?</h2>
-        <p>The internship sparked a strong interest in AI development, specifically in prompt engineering
-and model enhancement. However, noticing that I did not have the opportunity to work directly
-on APIs or databases during this tenure, I have identified a new career goal: transitioning into
-Backend Development to master the architectural side of software. Furthermore, I am now
-interested in DevOps roles, as I am eager to learn the technicalities of how complex
-applications and websites are deployed and maintained in production.</p>
-    </section>
-  <!-- add more sections if you have more questions -->
+      <article class="question-card reveal delay-3 visible">
+        <span class="q-number">04</span>
+        <div class="q-content">
+          <h2>After your workplace experience, what would you say your value proposition would be to an employer? How can you demonstrate this?</h2>
+          <p>My core value proposition is adaptability. I entered this internship with no prior experience in
+            full-stack development or AI-RAG pipelines. Although the initial weeks were difficult as I
+            learned to navigate client meetings and technical updates, I rapidly adjusted. I can demonstrate
+            this adaptability through my record of opening and reviewing multiple pull requests, integrating
+            client feedback regarding my professional manner, and receiving positive stakeholder reviews
+            on the final code base.</p>
+        </div>
+      </article>
 
-</layout>
+      <article class="question-card reveal delay-4 visible">
+        <span class="q-number">05</span>
+        <div class="q-content">
+          <h2>How did your internship influence the type of role in which you are interested?</h2>
+          <p>The internship sparked a strong interest in AI development, specifically in prompt engineering
+            and model enhancement. However, noticing that I did not have the opportunity to work directly
+            on APIs or databases during this tenure, I have identified a new career goal: transitioning into
+            Backend Development to master the architectural side of software. Furthermore, I am now
+            interested in DevOps roles, as I am eager to learn the technicalities of how complex
+            applications and websites are deployed and maintained in production.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</Layout>
+
+<style lang="scss">
+  // ── Page wrapper ──────────────────────────────
+  .reflections-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 80px 24px 100px;
+  }
+
+  // ── Page header ───────────────────────────────
+  .page-header {
+    margin-bottom: 64px;
+
+    h1 {
+      margin-bottom: 16px;
+
+      span {
+        color: var(--blue-primary);
+      }
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.75;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  // ── Question cards ────────────────────────────
+  .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .question-card {
+    display: grid;
+    // number column | content column
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      border-color: var(--border-hover);
+      transform: translateX(4px);
+    }
+  }
+
+  // ── Question number ───────────────────────────
+  .q-number {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--blue-primary);
+    opacity: 0.5;
+    line-height: 1;
+    padding-top: 4px;
+  }
+
+  // ── Question content ──────────────────────────
+  .q-content {
+    h2 {
+      font-size: 1.05rem;
+      color: white;
+      margin-bottom: 14px;
+      line-height: 1.4;
+      // slightly smaller than global h2 since these are Q&A headings
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+  }
+
+  // ── Responsive ───────────────────────────────
+  @media (max-width: 600px) {
+    .reflections-wrap {
+      padding: 48px 20px 72px;
+    }
+
+    .question-card {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 24px;
+    }
+
+    .q-number {
+      font-size: 1rem;
+    }
+  }
+</style>
